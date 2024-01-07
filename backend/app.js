@@ -1,13 +1,18 @@
-const express = require("express");
-const https = require("https");
-const socket_io = require("socket.io");
+import express from "express";
+import https from "https";
+import { Server } from "socket.io";
+import dotenv from "dotenv";
+dotenv.config();
 
-const PORT = process.env.PORT || 8080
+const PORT = 4000
+
+import "./config/mongo.js"
 
 
 const app = express();
 const server = https.createServer(app)
-const io = socket_io(server, {
+
+const io = new Server(server, {
     cors: {
         origin: "http://localhost:3000"
     }
