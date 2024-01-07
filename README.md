@@ -98,7 +98,7 @@ $ cd backend
 $ node app.js
 ```
 
-Docker Way\
+Docker Way \
 
 Run this command
 
