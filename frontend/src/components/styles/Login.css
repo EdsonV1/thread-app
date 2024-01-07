@@ -1,0 +1,100 @@
+.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0px;
+    height: 100vh;
+    width: 100%;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.text{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+form {
+    width: 40%;
+}
+  
+.form-group {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus {
+    border-bottom-color: #2196F3;
+}
+
+/* Pseudo-element for the line at the bottom */
+.form-group input[type="text"]::before,
+.form-group input[type="password"]::before,
+.form-group input[type="email"]::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #2196F3;
+    transition: width 0.3s ease;
+}
+
+input[type="text"]:focus::before,
+input[type="password"]:focus::before,
+input[type="email"]:focus::before {
+    width: 100%;
+}
+  
+
+.form-group button {
+    width: 50%;
+    background-color: #4898c9;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
+.form-group button:active {
+	position:relative;
+	top:1px;
+}
+
+a {
+    text-decoration: none;
+    color: #77A5F7;
+}
