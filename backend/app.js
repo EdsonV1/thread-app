@@ -3,6 +3,8 @@ import http from "http"; // Change from https to http
 import bodyParser from "body-parser";
 import { Server } from "socket.io";
 import dotenv from "dotenv";
+import cors from "cors";
+
 dotenv.config();
 
 const PORT = 4000;
@@ -15,6 +17,13 @@ const server = http.createServer(app); // Changed to http.createServer
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors({
+    origin: "http://localhost:3000",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true
+}));
+
 app.use('/backend', userRoutes);
 
 const io = new Server(server, {
